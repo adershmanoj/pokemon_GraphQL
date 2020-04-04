@@ -14,7 +14,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #202020;
     background-color: #fbfbfb;
-    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     
 }
 
@@ -97,4 +98,26 @@ body {
     margin: 0;
     padding: 5px 20px;
     border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+    .container .pokemon {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .container .pokemon__attacks, .container .pokemon__meta {
+        flex-wrap: wrap;
+    }
+    
+    .container .pokemon__meta span,
+    .container .pokemon__attacks p,
+    .container .pokemon {
+        width: 100%;
+    }
+    
+    .container .pokemon__meta span {
+        margin-bottom: 10px;
+    }
 }
