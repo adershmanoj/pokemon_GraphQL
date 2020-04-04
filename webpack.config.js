@@ -1,3 +1,5 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   "output": {
     "filename": "[name].pack.js"
@@ -21,5 +23,14 @@ module.exports = {
   },
   "entry": {
     "index": "./index"
-  }
+  },
+  devServer: {
+    compress: true,
+    port: 9000
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+        template: 'index.html'
+    })
+  ]
 };

@@ -10,7 +10,7 @@ export function App() {
     })
 
     return (
-        <ApolloProvider client='client'>
+        <ApolloProvider client = {client}>
             <main>
                 <PokemonsContainer />
             </main>

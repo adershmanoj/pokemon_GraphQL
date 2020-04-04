@@ -11,10 +11,12 @@ export function Pokemon({ pokemon }) {
                 <span>{pokemon.maxCP}</span>
             </div>
             <div className="pokemon__image">
-                <img src = {pokemon.image} alt={pokemon.name} />
+                <img src={pokemon.image} alt={pokemon.name} />
             </div>
             <div className="pokemon__attacks">
-            
+                {pokemon.attacks.special.slice(0, 3).map(attack => (
+                    <p key={attack.name}>{attack.name}</p>
+                ))}
             </div>
         </div>
     )
